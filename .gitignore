@@ -27,3 +27,9 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### text files ###
+Clients.txt
+EmployeeStats.txt
+Presences.txt
+Users.txt
