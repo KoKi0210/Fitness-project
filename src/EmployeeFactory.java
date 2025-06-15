@@ -19,30 +19,6 @@ public class EmployeeFactory {
         this.scanner = scanner;
     }
 
-    public Client createClient() {
-        String fullName;
-        System.out.print("Въведете две имена: ");
-        fullName = scanner.nextLine();
-        String[] names = fullName.split(" ", 2);
-        String fName = names[0];
-        String lName = names[1];
-
-        System.out.print("Въведете тел. номер: ");
-        String number = scanner.nextLine();
-        Matcher matcher = pattern.matcher(number);
-        while (!matcher.matches() || isPhoneNumberRegistered(number)) {
-            System.out.println("Въведения номер е грешен, чуждестранен или е използван!");
-            System.out.print("Въведете номер: ");
-            number = scanner.nextLine();
-            matcher = pattern.matcher(number);
-        }
-
-        System.out.print("Въведете години: ");
-        int age = Integer.parseInt(scanner.nextLine());
-
-        return new Client(fName, lName, number, age);
-    }
-
     public void registerClient(int employee_id) {
 
         System.out.print("Въведете номер за регистрация: ");

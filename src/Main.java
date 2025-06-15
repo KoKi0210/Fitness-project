@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Main {
     static final String DB_URL = "jdbc:mysql://localhost/fitness";
-    static final String USER = "";
-    static final String PASSWORD = "";
+    static final String USER = "Koki";
+    static final String PASSWORD = "082408";
     private static final Scanner scanner = new Scanner(System.in);
     private static boolean isWorking = true;
 
@@ -27,7 +27,6 @@ public class Main {
                 return;
             }
             String password = scanner.nextLine();
-
 
             UserFactory userFactory = new UserFactory();
 
@@ -87,8 +86,6 @@ public class Main {
         System.out.print("Въведете парола за администратора: ");
         String password = scanner.nextLine();
 
-        //String passwordHash = SecurityUtil.hashPassword(password);
-
         String insertUserSql = "insert into users(name,role,password)values(?,?,?)";
         String insertAdminSql = "insert into admins(user_id, user_name)values (?, ?)";
 
@@ -121,9 +118,7 @@ public class Main {
                     }
                 }
             }
-
             return true;
-
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
