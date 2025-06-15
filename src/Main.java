@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Main {
     static final String DB_URL = "jdbc:mysql://localhost/fitness";
-    static final String USER = "Koki";
-    static final String PASSWORD = "082408";
+    static final String USER = "";
+    static final String PASSWORD = "";
     private static final Scanner scanner = new Scanner(System.in);
     private static boolean isWorking = true;
 
